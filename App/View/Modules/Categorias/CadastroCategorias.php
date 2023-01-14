@@ -30,9 +30,11 @@
 
                     <form action="/categorias/cadastro/salvar" method="post" id="form">
 
+                        <input type="hidden" name="id" value="<?= $model->id ?>">
+
                         <label for="descricao"> Descrição: </label>
                         <input type="text" name="descricao" maxlength="100" minlength="4"
-                        placeholder="Insira o texto aqui" required>
+                        placeholder="Insira o texto aqui" value="<?= $model->descricao ?>" required>
 
                         <button type="submit"> CADASTRAR </button>
 

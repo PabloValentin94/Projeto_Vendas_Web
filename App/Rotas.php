@@ -21,6 +21,19 @@ switch($url)
         CategoriasController::Cadastro();
     break;
 
+    case "/categorias/cadastro/salvar":
+        CategoriasController::Salvar();
+    break;
+
+    case "/categorias/apagar":
+        CategoriasController::Apagar();
+    break;
+
+    case "/categorias/listagem":
+        CategoriasController::Listagem();
+    break;
+
+    // Exibição padrão:
 
     default:
         echo "Error 404";
