@@ -60,7 +60,7 @@ class CategoriasDAO extends DAO
     public function Select()
     {
 
-        $sql = "SELECT * FROM Categoria";
+        $sql = "SELECT * FROM Categoria ORDER BY id ASC";
 
         $stmt = $this->conexao->prepare($sql);
 

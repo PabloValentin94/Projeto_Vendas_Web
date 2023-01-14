@@ -36,7 +36,7 @@
                         <input type="text" name="descricao" maxlength="100" minlength="4"
                         placeholder="Insira o texto aqui" value="<?= $model->descricao ?>" required>
 
-                        <button type="submit"> CADASTRAR </button>
+                        <button type="submit"> SALVAR </button>
 
                     </form>
 

@@ -15,6 +15,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    background-image: linear-gradient(#FCD462, #44C4A1, #E56353, #27A2DB);
 
 }
 
@@ -26,7 +27,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: transparent;
+    background-color: #FFFFFF;
     border: 5px solid #000000;
     border-radius: 15px;
 
