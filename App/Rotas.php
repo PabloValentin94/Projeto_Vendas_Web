@@ -4,6 +4,8 @@
 
 use App\Controller\CategoriasController;
 
+use App\Controller\CidadesController;
+
 $url = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
 
 switch($url)
@@ -31,6 +33,24 @@ switch($url)
 
     case "/categorias/listagem":
         CategoriasController::Listagem();
+    break;
+
+    // Cidades:
+
+    case "/cidades/cadastro":
+        CidadesController::Cadastro();
+    break;
+
+    case "/cidades/cadastro/salvar":
+        CidadesController::Salvar();
+    break;
+
+    case "/cidades/apagar":
+        CidadesController::Apagar();
+    break;
+
+    case "/cidades/listagem":
+        CidadesController::Listagem();
     break;
 
     // Exibição padrão:

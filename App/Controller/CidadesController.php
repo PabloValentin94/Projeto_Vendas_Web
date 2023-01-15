@@ -2,15 +2,15 @@
 
 namespace App\Controller;
 
-use App\Model\CategoriasModel;
+use App\Model\CidadesModel;
 
-class CategoriasController extends Controller
+class CidadesController extends Controller
 {
 
     public static function Cadastro()
     {
 
-        $model = new CategoriasModel();
+        $model = new CidadesModel();
 
         if(isset($_GET["id"]))
         {
@@ -19,18 +19,18 @@ class CategoriasController extends Controller
 
         }
 
-        parent::render("Categorias/CadastroCategorias", $model);
+        parent::render("Cidades/CadastroCidades", $model);
 
     }
 
     public static function Salvar()
     {
 
-        $model = new CategoriasModel();
+        $model = new CidadesModel();
 
         $model->id = $_POST["id"];
 
-        $model->descricao = $_POST["descricao"];
+        $model->nome = $_POST["nome"];
 
         $model->Save();
 
@@ -39,7 +39,7 @@ class CategoriasController extends Controller
     public static function Apagar()
     {
 
-        $model = new CategoriasModel();
+        $model = new CidadesModel();
 
         $model->Erase((int) $_GET["id"]);
 
@@ -48,11 +48,11 @@ class CategoriasController extends Controller
     public static function Listagem()
     {
 
-        $model = new CategoriasModel();
+        $model = new CidadesModel();
 
         $model->GetAllRows();
 
-        parent::render("Categorias/ListagemCategorias", $model);
+        parent::render("Cidades/ListagemCidades", $model);
 
     }
 

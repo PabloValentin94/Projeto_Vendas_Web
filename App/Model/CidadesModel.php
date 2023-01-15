@@ -2,17 +2,17 @@
 
 namespace App\Model;
 
-use App\DAO\CategoriasDAO;
+use App\DAO\CidadesDAO;
 
-class CategoriasModel extends Model
+class CidadesModel extends Model
 {
 
-    public $id, $descricao;
+    public $id, $nome;
 
     public function Save()
     {
 
-        $dao = new CategoriasDAO();
+        $dao = new CidadesDAO();
 
         if(empty($this->id))
         {
@@ -28,7 +28,7 @@ class CategoriasModel extends Model
 
             $dao->Update($this);
 
-            header("Location: /categorias/listagem");
+            header("Location: /cidades/listagem");
 
         }
 
@@ -37,18 +37,18 @@ class CategoriasModel extends Model
     public function Erase(int $id)
     {
 
-        $dao = new CategoriasDAO();
+        $dao = new CidadesDAO();
 
         $dao->Delete($id);
 
-        header("Location: /categorias/listagem");
+        header("Location: /cidades/listagem");
 
     }
 
     public function GetAllRows()
     {
 
-        $dao = new CategoriasDAO();
+        $dao = new CidadesDAO();
 
         $this->rows = $dao->Select();
 
@@ -57,7 +57,7 @@ class CategoriasModel extends Model
     public function GetByID(int $id)
     {
 
-        $dao = new CategoriasDAO();
+        $dao = new CidadesDAO();
 
         $registro = $dao->SelectByID($id);
 
@@ -71,7 +71,7 @@ class CategoriasModel extends Model
         else
         {
 
-            return new CategoriasModel();
+            return new CidadesModel();
 
         }
 
