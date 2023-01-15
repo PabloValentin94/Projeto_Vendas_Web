@@ -34,7 +34,7 @@ class CategoriasController extends Controller
 
         $model->Save();
 
-        header("Location: /categorias/cadastro");
+        header("Location: /");
 
     }
 
@@ -45,7 +45,7 @@ class CategoriasController extends Controller
 
         $model->Erase((int) $_GET["id"]);
 
-        header("Location: /categorias/listagem");
+        header("Location: /");
 
     }
 

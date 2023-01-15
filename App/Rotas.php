@@ -12,7 +12,7 @@ switch($url)
     // Página inicial:
 
     case "/":
-        echo "Início";
+        include(BASEDIR . "App/View/Home/Home.php");
     break;
 
     // Categorias:
