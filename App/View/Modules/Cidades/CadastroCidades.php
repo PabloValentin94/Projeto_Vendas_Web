@@ -44,7 +44,7 @@
 
                 <div id="botoes">
 
-                    <button id="btn_voltar"> <a href="/"> VOLTAR </a> </button>
+                    <button id="btn_voltar"> <a href="/"> INÍCIO </a> </button>
                     <button id="btn_listagem"> <a href="/cidades/listagem"> LISTAGEM </a> </button>
 
                 </div>

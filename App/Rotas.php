@@ -8,6 +8,10 @@ use App\Controller\CidadesController;
 
 use App\Controller\MarcasController;
 
+use App\Controller\ClientesController;
+
+use App\Controller\CaixaController;
+
 $url = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
 
 switch($url)
@@ -71,6 +75,34 @@ switch($url)
 
     case "/marcas/listagem":
         MarcasController::Listagem();
+    break;
+
+    // Clientes:
+
+    case "/clientes/cadastro":
+        ClientesController::Cadastro();
+    break;
+
+    case "/clientes/cadastro/salvar":
+        ClientesController::Salvar();
+    break;
+
+    case "/clientes/apagar":
+        ClientesController::Apagar();
+    break;
+
+    case "/clientes/listagem":
+        ClientesController::Listagem();
+    break;
+
+    // Caixa:
+
+    case "/caixa/pagamento":
+        CaixaController::Pagamento();
+    break;
+
+    case "/caixa/pagamento/salvar":
+        CaixaController::Salvar();
     break;
 
     // Exibição padrão:
