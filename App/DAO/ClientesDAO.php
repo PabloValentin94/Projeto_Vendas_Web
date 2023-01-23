@@ -90,7 +90,7 @@ class ClientesDAO extends DAO
     public function Select()
     {
 
-        $sql = "SELECT * FROM Cliente";
+        $sql = "SELECT * FROM Cliente ORDER BY id ASC";
 
         $stmt = $this->conexao->prepare($sql);
 

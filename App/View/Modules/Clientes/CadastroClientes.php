@@ -38,7 +38,7 @@
 
                                 <label for="nome"> Nome: </label>
                                 <input type="text" name="nome" maxlength="100" minlength="3"
-                                placeholder="Insira o texto aqui" value="<?= $model[0]->nome ?>" required>
+                                placeholder="Insira o seu nome aqui" value="<?= $model[0]->nome ?>" required>
 
                             </span>
 
@@ -65,7 +65,7 @@
 
                                 <label for="email"> E-mail: </label>
                                 <input type="email" name="email" maxlength="100" minlength="11"
-                                placeholder="Insira o texto aqui" value="<?= $model[0]->email ?>" required>
+                                placeholder="Insira o seu e-mail aqui" value="<?= $model[0]->email ?>" required>
 
                             </span>
 
@@ -73,7 +73,7 @@
 
                                 <label for="cpf"> CPF: </label>
                                 <input type="text" name="cpf" maxlength="14" minlength="11"
-                                placeholder="Insira o texto aqui" value="<?= $model[0]->cpf ?>" required>
+                                placeholder="###.###.###-##" value="<?= $model[0]->cpf ?>" required>
 
                             </span>
 
@@ -85,7 +85,7 @@
 
                                 <label for="telefone"> Telefone: </label>
                                 <input type="tel" name="telefone" maxlength="15" minlength="8"
-                                placeholder="Insira o texto aqui" value="<?= $model[0]->telefone ?>">
+                                placeholder="(##) #####-####" value="<?= $model[0]->telefone ?>">
 
                             </span>
 
@@ -93,7 +93,7 @@
 
                                 <label for="renda"> Renda: </label>
                                 <input type="text" name="renda" maxlength="16" minlength="4"
-                                placeholder="Insira o texto aqui" value="<?= $model[0]->renda ?>">
+                                placeholder="$" value="<?= $model[0]->renda ?>">
 
                             </span>
 

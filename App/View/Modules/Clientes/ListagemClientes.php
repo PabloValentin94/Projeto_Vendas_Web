@@ -31,7 +31,7 @@
 
                         <?php foreach($model[0] as $item): ?>
 
-                            <option value="<?= $item->id ?>"> <?= $item->nome ?> </option>
+                            <option value="<?= $item->id ?>"> <?= $item->nome ?> (<?= $item->cpf ?>) </option>
 
                         <?php endforeach ?>
 

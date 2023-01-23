@@ -1,6 +1,6 @@
 <?php
 
-// Namespaces:
+// Namespaces utilizadas:
 
 use App\Controller\CategoriasController;
 
@@ -9,6 +9,10 @@ use App\Controller\CidadesController;
 use App\Controller\MarcasController;
 
 use App\Controller\ClientesController;
+
+use App\Controller\CoresController;
+
+use App\Controller\ProdutosController;
 
 use App\Controller\CaixaController;
 
@@ -93,6 +97,42 @@ switch($url)
 
     case "/clientes/listagem":
         ClientesController::Listagem();
+    break;
+
+    // Cores:
+
+    case "/cores/cadastro":
+        CoresController::Cadastro();
+    break;
+
+    case "/cores/cadastro/salvar":
+        CoresController::Salvar();
+    break;
+
+    case "/cores/apagar":
+        CoresController::Apagar();
+    break;
+
+    case "/cores/listagem":
+        CoresController::Listagem();
+    break;
+
+    // Produtos:
+
+    case "/produtos/cadastro":
+        ProdutosController::Cadastro();
+    break;
+
+    case "/produtos/cadastro/salvar":
+        ProdutosController::Salvar();
+    break;
+
+    case "/produtos/apagar":
+        ProdutosController::Apagar();
+    break;
+
+    case "/produtos/listagem":
+        ProdutosController::Listagem();
     break;
 
     // Caixa:

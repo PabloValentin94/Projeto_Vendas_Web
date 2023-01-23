@@ -18,17 +18,31 @@
 
     <body>
         
-        <nav id="container">
+        <div id="container">
 
-            <p> <a href="/caixa/pagamento"> <img src="/View/Modules/Caixa/Images/Favicon.png" alt="Icon-Caixa"> Caixa </a> </p>
-            <p> <a href="/categorias/cadastro"> <img src="/View/Modules/Categorias/Images/Favicon.png" alt="Icon-Categorias"> Categorias </a> </p>
-            <p> <a href="/cidades/cadastro"> <img src="/View/Modules/Cidades/Images/Favicon.png" alt="Icon-Cidades"> Cidades </a> </p>
-            <p> <a href="/clientes/cadastro"> <img src="/View/Modules/Clientes/Images/Favicon.png" alt="Icon-Clientes"> Clientes </a> </p>
-            <p> <a href="/marcas/cadastro"> <img src="/View/Modules/Marcas/Images/Favicon.png" alt="Icon-Marcas"> Marcas </a> </p>
-            <p> <a href="/produtos/cadastro"> <img src="/View/Modules/Produtos/Images/Favicon.png" alt="Icon-Produtos"> Produtos </a> </p>
-            <p> <a href="/vendas/cadastro"> <img src="/View/Modules/Vendas/Images/Favicon.png" alt="Icon-Vendas"> Vendas </a> </p>
+            <nav id="menu">
 
-        </nav>
+                <span class="line">
+
+                    <p> <a href="/caixa/pagamento"> <img src="/View/Modules/Caixa/Images/Favicon.png" alt="Icon-Caixa"> Caixa </a> </p>
+                    <p> <a href="/categorias/cadastro"> <img src="/View/Modules/Categorias/Images/Favicon.png" alt="Icon-Categorias"> Categorias </a> </p>
+                    <p> <a href="/cidades/cadastro"> <img src="/View/Modules/Cidades/Images/Favicon.png" alt="Icon-Cidades"> Cidades </a> </p>
+                    <p> <a href="/cores/cadastro"> <img src="/View/Modules/Cores/Images/Favicon.png" alt="Icon-Cores"> Cores </a> </p>
+
+                </span>
+
+                <span class="line">
+
+                    <p> <a href="/clientes/cadastro"> <img src="/View/Modules/Clientes/Images/Favicon.png" alt="Icon-Clientes"> Clientes </a> </p>
+                    <p> <a href="/marcas/cadastro"> <img src="/View/Modules/Marcas/Images/Favicon.png" alt="Icon-Marcas"> Marcas </a> </p>
+                    <p> <a href="/produtos/cadastro"> <img src="/View/Modules/Produtos/Images/Favicon.png" alt="Icon-Produtos"> Produtos </a> </p>
+                    <p> <a href="/vendas/cadastro"> <img src="/View/Modules/Vendas/Images/Favicon.png" alt="Icon-Vendas"> Vendas </a> </p>
+
+                </span>
+
+            </nav>
+
+        </div>
 
     </body>
 
