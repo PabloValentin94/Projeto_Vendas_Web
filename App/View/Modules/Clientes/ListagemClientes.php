@@ -31,7 +31,7 @@
 
                         <?php foreach($model[0] as $item): ?>
 
-                            <option value="<?= $item->id ?>"> <?= $item->nome ?> (<?= $item->cpf ?>) </option>
+                            <option value="<?= $item->id ?>"> <?= $item->nome ?> (CPF: <?= $item->cpf ?>) </option>
 
                         <?php endforeach ?>
 
@@ -93,7 +93,7 @@
 
                             <tr> <td> <?= $model[1]->data_nascimento ?> </td> </tr>
 
-                            <tr> <td> R$<?= $model[1]->renda ?> </td> </tr>
+                            <tr> <td> $<?= $model[1]->renda ?> </td> </tr>
 
                             <?php if($model[1]->bloqueio_venda == 1): ?>
 

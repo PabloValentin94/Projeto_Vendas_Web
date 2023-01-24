@@ -37,19 +37,35 @@
                             <span class="campo">
 
                                 <label for="nome"> Nome: </label>
-                                <input type="text" name="nome" maxlength="100" minlength="3"
-                                placeholder="Insira o seu nome aqui" value="<?= $model[0]->nome ?>" required>
+                                <input type="text" name="nome" maxlength="100" minlength="2"
+                                placeholder="Nome - Cliente" value="<?= $model[0]->nome ?>" required>
 
                             </span>
 
                             <span class="campo">
 
-                                <label for="cidade"> Cidade: </label>
-                                <select name="id_cidade" id="">
+                                <label for="id_cidade"> Cidade: </label>
+                                <select name="id_cidade">
 
                                     <?php foreach($model[1] as $cidade): ?>
 
-                                        <option value="<?= $cidade->id ?>"> <?= $cidade->nome ?> </option>
+                                        <?php if(isset($_GET["id"])): ?>
+
+                                            <?php if($cidade->id == $model[0]->fk_cidade): ?>
+
+                                                <option value="<?= $cidade->id ?>" selected> <?= $cidade->nome ?> </option>
+
+                                            <?php else: ?>
+
+                                                <option value="<?= $cidade->id ?>"> <?= $cidade->nome ?> </option>
+
+                                            <?php endif ?>
+
+                                        <?php else: ?>
+
+                                            <option value="<?= $cidade->id ?>"> <?= $cidade->nome ?> </option>
+
+                                        <?php endif ?>
 
                                     <?php endforeach ?>
 
@@ -65,7 +81,7 @@
 
                                 <label for="email"> E-mail: </label>
                                 <input type="email" name="email" maxlength="100" minlength="11"
-                                placeholder="Insira o seu e-mail aqui" value="<?= $model[0]->email ?>" required>
+                                placeholder="E-mail - Cliente" value="<?= $model[0]->email ?>" required>
 
                             </span>
 
@@ -92,8 +108,8 @@
                             <span class="campo">
 
                                 <label for="renda"> Renda: </label>
-                                <input type="text" name="renda" maxlength="16" minlength="4"
-                                placeholder="$" value="<?= $model[0]->renda ?>">
+                                <input type="text" name="renda" maxlength="16" minlength="1"
+                                placeholder="($) Renda - Cliente" value="<?= $model[0]->renda ?>">
 
                             </span>
 

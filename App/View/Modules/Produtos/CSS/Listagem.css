@@ -1,0 +1,175 @@
+* {
+
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+body {
+
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(#FACC39, #F6813C, #00AFEE, #00F699);
+
+}
+
+#container {
+
+    height: 95%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+#selecao {
+
+    height: 10%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#selecao form {
+
+    height: 90%;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#selecao form label {
+
+    color: #FFFFFF;
+    font-weight: bolder;
+    font-size: larger;
+
+}
+
+#selecao form select {
+
+    padding: 5px;
+    border: 3px solid #000000;
+    border-radius: 10px;
+    margin: 0px 10px 0px 10px;
+    cursor: pointer;
+
+}
+
+#selecao form button {
+
+    padding: 5px;
+    border: 3px solid #000000;
+    border-radius: 20px;
+    background-color: #800080;
+    color: #FFFFFF;
+    cursor: pointer;
+
+}
+
+#exibicao {
+
+    height: 80%;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+#titulos {
+
+    height: 90%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#header {
+
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    border: 5px solid #000000;
+
+}
+
+#header tr th {
+
+    height: 8%;
+    background-color: #FFFFFF;
+    text-align: center;
+
+}
+
+#registros {
+
+    height: 90%;
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#content {
+
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    border: 5px solid #000000;
+
+}
+
+#content tr td {
+
+    height: 8%;
+    background-color: #FFFFFF;
+    text-align: center;
+
+}
+
+#content button {
+
+    padding: 5px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+
+#content button a {
+
+    text-decoration: none;
+    color: #000000;
+
+}
+
+.no_rows {
+
+    height: 90%;
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    border: 5px solid #000000;
+
+}

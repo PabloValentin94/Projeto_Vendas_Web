@@ -6,6 +6,8 @@ use App\Model\ProdutosModel;
 
 use App\Model\CategoriasModel;
 
+use App\Model\CoresModel;
+
 use App\Model\MarcasModel;
 
 class ProdutosController extends Controller
@@ -18,9 +20,13 @@ class ProdutosController extends Controller
 
         $categorias = new CategoriasModel();
 
+        $cores = new CoresModel();
+
         $marcas = new MarcasModel();
 
         $categorias->GetAllRows();
+
+        $cores->GetAllRows();
 
         $marcas->GetAllRows();
 
@@ -37,11 +43,13 @@ class ProdutosController extends Controller
 
             $categorias->rows,
 
+            $cores->rows,
+
             $marcas->rows
 
         ];
 
-        parent::render("Produtos/CadastroProdutos");
+        parent::render("Produtos/CadastroProdutos", $dados);
 
     }
 
@@ -64,6 +72,8 @@ class ProdutosController extends Controller
 
         $model->fk_categoria = $_POST["id_categoria"];
 
+        $model->fk_cor = $_POST["id_cor"];
+
         $model->fk_marca = $_POST["id_marca"];
 
         $model->Save();
@@ -82,7 +92,48 @@ class ProdutosController extends Controller
     public static function Listagem()
     {
 
-        parent::render("Produtos/ListagemProdutos");
+        $model = new ProdutosModel();
+
+        $model->GetAllRows();
+
+        $dados = [$model->rows];
+
+        if(isset($_POST["nome_produto"]))
+        {
+
+            if($_POST["nome_produto"] == "nenhum")
+            {
+
+                array_push($dados, NULL, NULL, NULL);
+                
+            }
+
+            else
+            {
+
+                array_push($dados, $model->GetByID((int) $_POST["nome_produto"]));
+
+                array_push($dados,
+                           $model->GetCategoryByID($dados[1]->fk_categoria), 
+                           $model->GetColorByID($dados[1]->fk_cor),
+                           $model->GetBrandByID($dados[1]->fk_marca));
+
+                /*array_push($dados, $model->GetColorByID($dados[1]->fk_cor));
+
+                array_push($dados, $model->GetBrandByID($dados[1]->fk_marca));*/
+
+            }
+
+        }
+
+        else
+        {
+
+            array_push($dados, NULL, NULL, NULL);
+
+        }
+
+        parent::render("Produtos/ListagemProdutos", $dados);
 
     }
 

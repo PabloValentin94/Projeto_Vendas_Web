@@ -65,6 +65,7 @@ body {
     border: 3px solid #000000;
     border-radius: 10px;
     margin: 0px 10px 0px 10px;
+    cursor: pointer;
 
 }
 
@@ -75,6 +76,7 @@ body {
     border-radius: 20px;
     background-color: #FFA500;
     color: #FFFFFF;
+    cursor: pointer;
 
 }
 
